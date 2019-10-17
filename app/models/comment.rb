@@ -1,4 +1,3 @@
 class Comment < ApplicationRecord
-  belongs_to :
-  belongs_to :
+  belongs_to :discussion
 end
