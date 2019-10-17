@@ -6,19 +6,18 @@
 </p>
 
 <p>
-  <strong>:</strong>
-  <%= @discussion. %>
-</p>
-
-<p>
   <strong>Content:</strong>
   <%= @discussion.content %>
 </p>
 
-<p>
-  <strong>:</strong>
-  <%= @discussion. %>
-</p>
-
+<% if @discussion.comments.any? %>
+  <h4>Comments</h4>
+  <% @discussion.comments.each do |comment| %>
+    <p>
+      <strong><%= comment.user.name %>: </strong>
+      <%= comment.body %>
+    </p>
+  <% end %>
+<% end %>
 <%= link_to 'Edit', edit_discussion_path(@discussion) %> |
 <%= link_to 'Back', discussions_path %>
