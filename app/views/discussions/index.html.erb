@@ -6,9 +6,7 @@
   <thead>
     <tr>
       <th>Title</th>
-      <th></th>
       <th>Content</th>
-      <th></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,9 +15,7 @@
     <% @discussions.each do |discussion| %>
       <tr>
         <td><%= discussion.title %></td>
-        <td><%= discussion. %></td>
         <td><%= discussion.content %></td>
-        <td><%= discussion. %></td>
         <td><%= link_to 'Show', discussion %></td>
         <td><%= link_to 'Edit', edit_discussion_path(discussion) %></td>
         <td><%= link_to 'Destroy', discussion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
